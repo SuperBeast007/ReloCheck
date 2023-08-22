@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReloCheck.Views.LoginPage"
+             BackgroundColor="White"
+             Title="Login Page">
+    
+    <VerticalStackLayout VerticalOptions="StartAndExpand">
+
+        <Entry Placeholder="Username" Text="{Binding myloginRequestModel.UserName}">
+            
+        </Entry>
+
+        <Entry Placeholder="Password" Text="{Binding myloginRequestModel.Password}">
+
+        </Entry>
+        <Button Text="Login" BackgroundColor="Grey" TextColor="Black" Command="{Binding LoginCommand}"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReloCheck.Views.TravelRates"
+             Title="Travel Distance Rates">
+    
+    <VerticalStackLayout>
+         <Label VerticalOptions="Center" HorizontalOptions="Center" FontSize="Header">Data Input and Destinations</Label>
+        <Label VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="Body">
+            Retrieve the list of items that have been allocated to specific transportation containers or trucks. 
+            Each allocated item should have information (name, room, size, weight). 
+            Obtain information about the destinations of the allocated items (Addresses or coordinates).
+        </Label>
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

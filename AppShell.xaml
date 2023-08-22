@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ReloCheck.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ReloCheck"
+    xmlns:mylogin="clr-namespace:ReloCheck.Views"
+    Shell.FlyoutBehavior="Flyout">
+
+
+    <FlyoutItem Route="Login">
+        <ShellContent ContentTemplate="{DataTemplate mylogin:LoginPage}"/>
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
+        <ShellContent ContentTemplate="{DataTemplate mylogin:RoomDetailss}"/>
+        <ShellContent ContentTemplate="{DataTemplate mylogin:EditRoom}"/>
+        <ShellContent ContentTemplate="{DataTemplate mylogin:RequiredDetails}"/>
+        <ShellContent ContentTemplate="{DataTemplate mylogin:BarcodeManagement}"/>
+        <ShellContent ContentTemplate="{DataTemplate mylogin:SpaceAllocation}"/>
+        <ShellContent ContentTemplate="{DataTemplate mylogin:TravelRates}"/>
+    </FlyoutItem>
+    
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+        Icon="login.svg"
+        Title="Login Page"
+        ContentTemplate="{DataTemplate mylogin:LoginPage}"
+        Route="Login" />
+        
+        <ShellContent
+        Icon="home.svg"
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+        <ShellContent
+        Icon="room_details.svg"
+        Title="Room Details"
+        ContentTemplate="{DataTemplate mylogin:RoomDetailss}"
+        Route="RoomDetails" />
+
+        <ShellContent
+        Icon="edit_room.svg"
+        Title="Edit Room"
+        ContentTemplate="{DataTemplate mylogin:EditRoom}"
+        Route="EditRoom" />
+
+        <ShellContent
+        Icon="required_details.svg"
+        Title="Required Details"
+        ContentTemplate="{DataTemplate mylogin:RequiredDetails}"
+        Route="RequiredDetails" />
+
+        <ShellContent
+        Icon="barcode.svg"
+        Title="Barcode Management"
+        ContentTemplate="{DataTemplate mylogin:BarcodeManagement}"
+        Route="BarcodeManagement" />
+
+        <ShellContent
+        Icon="space_allocation.svg"
+        Title="Space Allocation"
+        ContentTemplate="{DataTemplate mylogin:SpaceAllocation}"
+        Route="SpaceAllocation" />
+
+        <ShellContent
+        Icon="travel_distance.svg"
+        Title="Travel Distance Rates"
+        ContentTemplate="{DataTemplate mylogin:TravelRates}"
+        Route="TravelRates" />
+    </FlyoutItem>
+    
+
+
+</Shell>

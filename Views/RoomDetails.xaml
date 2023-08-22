@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ReloCheck"
+             x:Class="ReloCheck.Views.RoomDetailss"
+             Title="Room Details">
+    
+    <StackLayout>
+        <Label Text="List of Rooms" FontSize="Title" HorizontalOptions="CenterAndExpand" />
+
+        <ListView x:Name="roomListView">
+            <ListView.ItemTemplate>
+                <DataTemplate x:Name="RoomDetails">
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <Image Source="{Binding Thumbnail}" WidthRequest="50" HeightRequest="50" />
+
+                            <StackLayout>
+                                <Label Text="{Binding RoomName}" FontSize="Medium" />
+                                <Label Text="{Binding TotalItems, StringFormat='Total Items: {0}'}" FontSize="Small" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
