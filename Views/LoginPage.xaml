@@ -4,19 +4,41 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Login Page"
-    BackgroundColor="White">
+    BackgroundColor="White"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
 
-    <VerticalStackLayout VerticalOptions="StartAndExpand">
+    <VerticalStackLayout
+        HorizontalOptions="CenterAndExpand"
+        Spacing="20"
+        VerticalOptions="StartAndExpand">
 
-        <Entry x:Name="EmailEntry" Placeholder="Email" />
+        <Entry
+            x:Name="EmailEntry"
+            Placeholder="Email"
+            Style="{StaticResource EntryStyle}" />
 
         <Entry
             x:Name="PasswordEntry"
             IsPassword="true"
-            Placeholder="Password" />
-        <Button Clicked="OnLoginButtonClicked" Text="Login" />
-        <Button Clicked="OnForgotPasswordButtonClicked" Text="Forgot Password" />
+            Placeholder="Password"
+            Style="{StaticResource EntryStyle}" />
+        <Button
+            Padding="10"
+            Clicked="OnLoginButtonClicked"
+            Style="{StaticResource ButtonStyle}"
+            Text="Login" />
+        <Button
+            Padding="10"
+            Clicked="OnForgotPasswordButtonClicked"
+            Style="{StaticResource ButtonStyle}"
+            Text="Forgot Password" />
 
-
+        <Image
+            AbsoluteLayout.LayoutBounds="0,0,0,0"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Source="google_logo.svg" />
     </VerticalStackLayout>
 </ContentPage>
+
+

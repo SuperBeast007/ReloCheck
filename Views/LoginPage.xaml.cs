@@ -23,7 +23,7 @@ public partial class LoginPage : ContentPage
 
         if (isLoginSuccessful)
         {
-            // Navigate to the main page or perform necessary actions.
+            // Navigate to the main page
         }
         else
         {
@@ -41,7 +41,7 @@ public partial class LoginPage : ContentPage
 
 
         // Need to link to database for security
-        return email == "user" && password == "password";
+        return email == "Test@gmail.com" && password == "password";
     }
     private async void OnForgotPasswordButtonClicked(object sender, EventArgs e)
     {

@@ -51,11 +51,13 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\barcode.svg" />
 	  <None Remove="Resources\Images\edit_room.svg" />
+	  <None Remove="Resources\Images\Google_logo.svg" />
 	  <None Remove="Resources\Images\home.svg" />
 	  <None Remove="Resources\Images\login.svg" />
 	  <None Remove="Resources\Images\required_details.svg" />
 	  <None Remove="Resources\Images\room_details.svg" />
 	  <None Remove="Resources\Images\space_allocation.svg" />
+	  <None Remove="Resources\Images\testLogo.svg" />
 	  <None Remove="Resources\Images\travel_distance.svg" />
 	</ItemGroup>
 
