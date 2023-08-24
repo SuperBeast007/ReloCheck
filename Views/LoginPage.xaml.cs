@@ -24,6 +24,7 @@ public partial class LoginPage : ContentPage
         if (isLoginSuccessful)
         {
             // Navigate to the main page
+            
         }
         else
         {

@@ -7,8 +7,14 @@
     
     <StackLayout>
         <Label Text="List of Rooms" FontSize="Title" HorizontalOptions="CenterAndExpand" />
-
-        <ListView x:Name="roomListView">
+        <Button Text="+"
+            HorizontalOptions="End"
+            VerticalOptions="Center"
+            BackgroundColor="Green"
+            Margin="2"
+            Clicked="OnButtonClick"/>
+        
+        <!--<ListView x:Name="roomListView">
             <ListView.ItemTemplate>
                 <DataTemplate x:Name="RoomDetails">
                     <ViewCell>
@@ -23,6 +29,8 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </ListView>-->
+
+        
     </StackLayout>
 </ContentPage>
