@@ -7,6 +7,13 @@
     
     <StackLayout>
         <Label Text="List of Rooms" FontSize="Title" HorizontalOptions="CenterAndExpand" />
+        <Button Text="Reload"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            BackgroundColor="Green"
+            Margin="2"
+            Clicked="OnReloadClick"/>
+        
         <Button Text="+"
             HorizontalOptions="End"
             VerticalOptions="Center"
@@ -14,22 +21,8 @@
             Margin="2"
             Clicked="OnButtonClick"/>
         
-        <!--<ListView x:Name="roomListView">
-            <ListView.ItemTemplate>
-                <DataTemplate x:Name="RoomDetails">
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal" Padding="10">
-                            <Image Source="{Binding Thumbnail}" WidthRequest="50" HeightRequest="50" />
-
-                            <StackLayout>
-                                <Label Text="{Binding RoomName}" FontSize="Medium" />
-                                <Label Text="{Binding TotalItems, StringFormat='Total Items: {0}'}" FontSize="Small" />
-                            </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>-->
+        
+        
 
         
     </StackLayout>

@@ -2,6 +2,8 @@ using ReloCheck.Resources.ViewModels;
 
 using System;
 using Microsoft.Maui.Controls;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace ReloCheck.Views;
 
@@ -16,15 +18,22 @@ public partial class LoginPage : ContentPage
 
     private void OnLoginButtonClicked(object sender, EventArgs e)
     {
+        //string connstring = @"server=LAPTOP-UPC09RTU;userid=default;password=default;database=MoverSynq ";
+
+        //MySqlConnection conn = null;
+
+
         string email = EmailEntry.Text;
         string password = PasswordEntry.Text;
+
 
         bool isLoginSuccessful = Login(email, password);
 
         if (isLoginSuccessful)
         {
             // Navigate to the main page
-            
+
+
         }
         else
         {
@@ -85,6 +94,66 @@ public partial class LoginPage : ContentPage
         {
             return false;
         }
+    }
+
+
+
+    private async void OnGoogleClicked(object sender, EventArgs e)
+    {
+        try
+        {
+            WebAuthenticatorResult authResult = await WebAuthenticator.Default.AuthenticateAsync(
+                new WebAuthenticatorOptions()
+                {
+                    Url = new Uri("https://ReloCheck.com/mobileauth/Microsoft"),
+                    CallbackUrl = new Uri("ReloCheck://"),
+                    PrefersEphemeralWebBrowserSession = true
+                });
+            string accessToken = authResult?.AccessToken;
+        }
+        catch (TaskCanceledException ef)
+        {
+            return;
+        }
+    }
+
+    private async void OnFBClicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private async void OnAppleClicked(object sender, EventArgs e)
+    {
+        var scheme = "..."; // Apple, Microsoft, Google, Facebook, etc.
+        var authUrlRoot = "https://mysite.com/mobileauth/";
+        WebAuthenticatorResult result = null;
+
+        if (scheme.Equals("Apple")
+            && DeviceInfo.Platform == DevicePlatform.iOS
+            && DeviceInfo.Version.Major >= 13)
+        {
+            // Use Native Apple Sign In API's
+            result = await AppleSignInAuthenticator.AuthenticateAsync();
+        }
+        else
+        {
+            // Web Authentication flow
+            var authUrl = new Uri($"{authUrlRoot}{scheme}");
+            var callbackUrl = new Uri("ReloCheck://");
+
+            result = await WebAuthenticator.Default.AuthenticateAsync(authUrl, callbackUrl);
+        }
+
+        var authToken = string.Empty;
+
+        if (result.Properties.TryGetValue("name", out string name) && !string.IsNullOrEmpty(name))
+            authToken += $"Name: {name}{Environment.NewLine}";
+
+        if (result.Properties.TryGetValue("email", out string email) && !string.IsNullOrEmpty(email))
+            authToken += $"Email: {email}{Environment.NewLine}";
+
+        // Note that Apple Sign In has an IdToken and not an AccessToken
+        authToken += result?.AccessToken ?? result?.IdToken;
     }
 }
 

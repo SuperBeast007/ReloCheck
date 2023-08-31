@@ -49,20 +49,27 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\apple.svg" />
 	  <None Remove="Resources\Images\barcode.svg" />
+	  <None Remove="Resources\Images\box.svg" />
 	  <None Remove="Resources\Images\edit_room.svg" />
-	  <None Remove="Resources\Images\Google_logo.svg" />
+	  <None Remove="Resources\Images\facebook.svg" />
+	  <None Remove="Resources\Images\googlelogo.svg" />
 	  <None Remove="Resources\Images\home.svg" />
 	  <None Remove="Resources\Images\login.svg" />
+	  <None Remove="Resources\Images\logout.svg" />
 	  <None Remove="Resources\Images\required_details.svg" />
 	  <None Remove="Resources\Images\room_details.svg" />
 	  <None Remove="Resources\Images\space_allocation.svg" />
-	  <None Remove="Resources\Images\testLogo.svg" />
 	  <None Remove="Resources\Images\travel_distance.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="IdentityModel.OidcClient" Version="5.2.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="MySql.Data" Version="8.1.0" />
+		<PackageReference Include="MySqlConnector" Version="2.3.0-beta.3" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -101,5 +108,7 @@
 	<ItemGroup>
 	  <Folder Include="Resources\Templates\" />
 	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionReloCheckHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>

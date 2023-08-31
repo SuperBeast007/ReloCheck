@@ -21,52 +21,57 @@
     
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent
-        Icon="login.svg"
-        Title="Login Page"
-        ContentTemplate="{DataTemplate mylogin:LoginPage}"
-        Route="Login" />
+            Icon="login.svg"
+            Title="Login Page"
+            ContentTemplate="{DataTemplate mylogin:LoginPage}"
+            Route="Login" />
         
         <ShellContent
-        Icon="home.svg"
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+            Icon="home.svg"
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
 
         <ShellContent
-        Icon="room_details.svg"
-        Title="Room Details"
-        ContentTemplate="{DataTemplate mylogin:RoomDetailss}"
-        Route="RoomDetails" />
+            Icon="room_details.svg"
+            Title="Room Details"
+            ContentTemplate="{DataTemplate mylogin:RoomDetailss}"
+            Route="RoomDetails" />
 
         <ShellContent
-        Icon="edit_room.svg"
-        Title="Edit Room"
-        ContentTemplate="{DataTemplate mylogin:EditRoom}"
-        Route="EditRoom" />
+            Icon="edit_room.svg"
+            Title="Edit Room"
+            ContentTemplate="{DataTemplate mylogin:EditRoom}"
+            Route="EditRoom" />
 
         <ShellContent
-        Icon="required_details.svg"
-        Title="Required Details"
-        ContentTemplate="{DataTemplate mylogin:RequiredDetails}"
-        Route="RequiredDetails" />
+            Icon="required_details.svg"
+            Title="Required Details"
+            ContentTemplate="{DataTemplate mylogin:RequiredDetails}"
+            Route="RequiredDetails" />
 
         <ShellContent
-        Icon="barcode.svg"
-        Title="Barcode Management"
-        ContentTemplate="{DataTemplate mylogin:BarcodeManagement}"
-        Route="BarcodeManagement" />
+            Icon="barcode.svg"
+            Title="Barcode Management"
+            ContentTemplate="{DataTemplate mylogin:BarcodeManagement}"
+            Route="BarcodeManagement" />
 
         <ShellContent
-        Icon="space_allocation.svg"
-        Title="Space Allocation"
-        ContentTemplate="{DataTemplate mylogin:SpaceAllocation}"
-        Route="SpaceAllocation" />
+            Icon="space_allocation.svg"
+            Title="Space Allocation"
+            ContentTemplate="{DataTemplate mylogin:SpaceAllocation}"
+            Route="SpaceAllocation" />
 
         <ShellContent
-        Icon="travel_distance.svg"
-        Title="Travel Distance Rates"
-        ContentTemplate="{DataTemplate mylogin:TravelRates}"
-        Route="TravelRates" />
+            Icon="travel_distance.svg"
+            Title="Travel Distance Rates"
+            ContentTemplate="{DataTemplate mylogin:TravelRates}"
+            Route="TravelRates" />
+
+        <ShellContent
+            Icon="Logout.svg"
+            ContentTemplate="{DataTemplate mylogin:LoginPage}"
+            Route="Login" />
     </FlyoutItem>
     
 

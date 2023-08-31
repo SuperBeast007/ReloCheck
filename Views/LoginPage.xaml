@@ -8,37 +8,84 @@
     Shell.FlyoutBehavior="Disabled"
     Shell.NavBarIsVisible="False">
 
-    <VerticalStackLayout
-        HorizontalOptions="CenterAndExpand"
-        Spacing="20"
-        VerticalOptions="StartAndExpand">
 
-        <Entry
-            x:Name="EmailEntry"
-            Placeholder="Email"
-            Style="{StaticResource EntryStyle}" />
+    <ScrollView>
+        <VerticalStackLayout
+            HorizontalOptions="CenterAndExpand"
+            Spacing="20"
+            VerticalOptions="Center">
 
-        <Entry
-            x:Name="PasswordEntry"
-            IsPassword="true"
-            Placeholder="Password"
-            Style="{StaticResource EntryStyle}" />
-        <Button
-            Padding="10"
-            Clicked="OnLoginButtonClicked"
-            Style="{StaticResource ButtonStyle}"
-            Text="Login" />
-        <Button
-            Padding="10"
-            Clicked="OnForgotPasswordButtonClicked"
-            Style="{StaticResource ButtonStyle}"
-            Text="Forgot Password" />
+            <!--<Image 
+                Scale="0.2"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Start"
+                Source="box.svg"/>-->
 
-        <Image
-            AbsoluteLayout.LayoutBounds="0,0,0,0"
-            AbsoluteLayout.LayoutFlags="PositionProportional"
-            Source="google_logo.svg" />
-    </VerticalStackLayout>
+            <Entry
+                x:Name="EmailEntry"
+                Placeholder="Email"
+                Style="{StaticResource EntryStyle}" />
+
+            <Entry
+                x:Name="PasswordEntry"
+                IsPassword="true"
+                Placeholder="Password"
+                Style="{StaticResource EntryStyle}" />
+            <Button
+                Padding="10"
+                Clicked="OnLoginButtonClicked"
+                Style="{StaticResource ButtonStyle}"
+                Text="Login" />
+            <Button
+                Padding="10"
+                Clicked="OnForgotPasswordButtonClicked"
+                Style="{StaticResource ButtonStyle}"
+                Text="Forgot Password" />
+
+            <Label
+                Text="Or"
+                HorizontalOptions="Center"
+                VerticalTextAlignment="Center"
+                />
+
+            <!--Google Login-->
+            <ImageButton
+                Source="googlelogo.svg" 
+                Clicked="OnGoogleClicked"
+                Scale="0.2"
+                AnchorX="0"
+                AnchorY="0"
+                AbsoluteLayout.LayoutBounds="0,0,0,0"
+                AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+            <!--FaceBook Login-->
+            <ImageButton
+                Source="facebook.svg"
+                Clicked="OnFBClicked"
+                Scale="0.2"
+                AnchorX="0"
+                AnchorY="0"
+                AbsoluteLayout.LayoutBounds="0,0,0,0"
+                AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+            <!--Apple Login-->
+            <ImageButton
+                Source="apple.svg" 
+                Clicked="OnAppleClicked"
+                Scale="0.2"
+                AnchorX="0"
+                AnchorY="0"
+                AbsoluteLayout.LayoutBounds="0,0,0,0"
+                AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            
+            <!--Key Apple
+            <key>com.apple.developer.applesignin</key>
+            <array>
+                <string>Default</string></array>-->
+            
+            
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
 
 
