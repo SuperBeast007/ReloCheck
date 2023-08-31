@@ -16,7 +16,7 @@ public partial class LoginPage : ContentPage
 		BindingContext = new LoginViewModel();
 	}
 
-    private void OnLoginButtonClicked(object sender, EventArgs e)
+    private async void OnLoginButtonClicked(object sender, EventArgs e)
     {
         //string connstring = @"server=LAPTOP-UPC09RTU;userid=default;password=default;database=MoverSynq ";
 
@@ -32,7 +32,7 @@ public partial class LoginPage : ContentPage
         if (isLoginSuccessful)
         {
             // Navigate to the main page
-
+            await Navigation.PushAsync(new MainPage());
 
         }
         else

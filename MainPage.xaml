@@ -2,12 +2,41 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ReloCheck"
+             BackgroundColor="{DynamicResource PageBackgroudColor}"
              x:Class="ReloCheck.MainPage"
              Title="Home">
 
-    <VerticalStackLayout>
-        
 
-    </VerticalStackLayout>
+    <ScrollView>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <!-- App Logo -->
+            <Image Source="box.svg" HorizontalOptions="Center" Margin="0,0,0,20"/>
+
+            <!-- Title -->
+            <Label Text="Welcome to AppName!" FontSize="Title" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+            <!-- Description -->
+            <Label Text="Make your moving experience smooth and stress-free with AppName. Our app guides you through the entire process, 
+               helping you plan, organize, and execute your move with ease." 
+               FontSize="Body" TextType="Text" HorizontalTextAlignment="Center" Margin="40,10"/>
+
+            <!-- Call to Action Button -->
+            <Button Text="Get Started" FontSize="Subtitle" FontAttributes="Bold" HorizontalOptions="Center" 
+                    VerticalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="50" 
+                    Clicked="GetStartedButton"
+                    BackgroundColor="{DynamicResource PrimaryColor}" TextColor="{DynamicResource PageBackgroundColor}"/>
+
+            <!-- App Features or Additional Information -->
+            <StackLayout HorizontalOptions="Center" VerticalOptions="EndAndExpand" Margin="0,30">
+                <Label Text="Key Features:" FontSize="Subtitle" FontAttributes="Bold"/>
+                <Label Text="• Create personalized moving checklists" FontSize="Body"/>
+                <Label Text="• Add and edit rooms and items to rooms" FontSize="Body"/>
+                <Label Text="• Barcode Scanner to scan boxes or items" FontSize="Body"/>
+                <Label Text="• Stay organized throughout your move" FontSize="Body"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+
 
 </ContentPage>

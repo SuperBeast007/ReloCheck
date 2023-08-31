@@ -20,6 +20,13 @@ namespace ReloCheck
             await Navigation.PushAsync(new RoomDetailss());
 
         }
+        private async void GetStartedButton(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new RoomDetailss());
+
+        }
+
     }
 
 }
