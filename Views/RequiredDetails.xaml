@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ReloCheck.Views.RequiredDetails"
-             Title="Required Details">
-    
+<ContentPage
+    x:Class="ReloCheck.Views.RequiredDetails"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Required Details">
+
     <VerticalStackLayout>
-        <Label VerticalOptions="Center" HorizontalOptions="Center" FontSize="Header">Required Details</Label>
-        
-        
-        
+        <Label
+            FontSize="Header"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            Required Details
+        </Label>
+
+
+
     </VerticalStackLayout>
 </ContentPage>

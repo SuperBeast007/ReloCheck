@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ReloCheck"
-             x:Class="ReloCheck.Views.RoomDetailss"
-             Title="Room Details">
-    
-    <StackLayout>
-        <Label Text="List of Rooms" FontSize="Title" HorizontalOptions="CenterAndExpand" />
-        <Button Text="Reload"
-            HorizontalOptions="Start"
-            VerticalOptions="Center"
-            BackgroundColor="Green"
-            Margin="2"
-            Clicked="OnReloadClick"/>
-        
-        <Button Text="+"
-            HorizontalOptions="End"
-            VerticalOptions="Center"
-            BackgroundColor="Green"
-            Margin="2"
-            Clicked="OnButtonClick"/>
-        
-        
-        
+<ContentPage
+    x:Class="ReloCheck.Views.RoomDetailss"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ReloCheck"
+    Title="Room Details">
 
-        
+    <StackLayout>
+        <Label
+            FontSize="Title"
+            HorizontalOptions="CenterAndExpand"
+            Text="List of Rooms" />
+        <Button
+            Margin="2"
+            BackgroundColor="Green"
+            Clicked="OnReloadClick"
+            HorizontalOptions="Start"
+            Text="Reload"
+            VerticalOptions="Center" />
+
+        <Button
+            Margin="2"
+            BackgroundColor="Green"
+            Clicked="OnButtonClick"
+            HorizontalOptions="End"
+            Text="+"
+            VerticalOptions="Center" />
+
+
+
+
+
     </StackLayout>
 </ContentPage>
