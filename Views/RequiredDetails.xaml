@@ -13,6 +13,44 @@
             Required Details
         </Label>
 
+        <Label Text="Item"
+               FontSize="Caption"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"/>
+
+        <Entry
+            x:Name="Item"
+            Placeholder="Item"
+            Style="{StaticResource EntryStyle}" />
+
+        <Picker x:Name="Picker"
+                Title="Select a Room">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Main Bedroom</x:String>
+                    <x:String>Second Bedroom</x:String>
+                    <x:String>Main Bathroom</x:String>
+                    <x:String>Kitchen</x:String>
+                    <x:String>Garage</x:String>
+                    <x:String>Storage Room</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Amount of Items"
+               FontSize="Caption"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"/>
+
+        <Slider Maximum="100" 
+                ValueChanged="OnSliderValueCahnged"/>
+        <Label x:Name="displayLabel"
+               Text="(uninitialized)"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+            
+            
+        
 
 
     </VerticalStackLayout>
