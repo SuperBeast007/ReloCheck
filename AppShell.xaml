@@ -12,11 +12,9 @@
         <ShellContent ContentTemplate="{DataTemplate mylogin:LoginPage}"/>
         <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
         <ShellContent ContentTemplate="{DataTemplate mylogin:RoomDetailss}"/>
-        <ShellContent ContentTemplate="{DataTemplate mylogin:EditRoom}"/>
-        <ShellContent ContentTemplate="{DataTemplate mylogin:RequiredDetails}"/>
-        <ShellContent ContentTemplate="{DataTemplate mylogin:BarcodeManagement}"/>
-        <ShellContent ContentTemplate="{DataTemplate mylogin:SpaceAllocation}"/>
-        <ShellContent ContentTemplate="{DataTemplate mylogin:TravelRates}"/>
+        
+        <ShellContent ContentTemplate="{DataTemplate mylogin:Search}"/>
+        <ShellContent ContentTemplate="{DataTemplate mylogin:NeedHelp}"/>
     </FlyoutItem>
     
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
@@ -38,7 +36,38 @@
             ContentTemplate="{DataTemplate mylogin:RoomDetailss}"
             Route="RoomDetails" />
 
+
         <ShellContent
+            Icon="search.svg"
+            Title="Search"
+            ContentTemplate="{DataTemplate mylogin:Search}"
+            Route="Search" />
+
+
+        <ShellContent
+            Title="Need Help?"
+            ContentTemplate="{DataTemplate mylogin:NeedHelp}"
+            Route="NeedHelp" />
+
+        <ShellContent
+            Icon="Logout.svg"
+            ContentTemplate="{DataTemplate mylogin:LoginPage}"
+            Route="Login" />
+
+    </FlyoutItem>
+    
+
+
+</Shell>
+
+
+<!--<ShellContent ContentTemplate="{DataTemplate mylogin:EditRoom}"/>
+<ShellContent ContentTemplate="{DataTemplate mylogin:RequiredDetails}"/>
+<ShellContent ContentTemplate="{DataTemplate mylogin:BarcodeManagement}"/>
+<ShellContent ContentTemplate="{DataTemplate mylogin:SpaceAllocation}"/>
+<ShellContent ContentTemplate="{DataTemplate mylogin:TravelRates}"/>-->
+
+<!--<ShellContent
             Icon="edit_room.svg"
             Title="Edit Room"
             ContentTemplate="{DataTemplate mylogin:EditRoom}"
@@ -68,12 +97,4 @@
             ContentTemplate="{DataTemplate mylogin:TravelRates}"
             Route="TravelRates" />
 
-        <ShellContent
-            Icon="Logout.svg"
-            ContentTemplate="{DataTemplate mylogin:LoginPage}"
-            Route="Login" />
-    </FlyoutItem>
-    
-
-
-</Shell>
+        -->

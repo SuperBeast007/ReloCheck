@@ -42,16 +42,31 @@
                HorizontalOptions="Start"
                VerticalOptions="Center"/>
 
-        <Slider Maximum="100" 
-                ValueChanged="OnSliderValueCahnged"/>
+        <!--<Slider Maximum="100" 
+                ValueChanged="OnSliderValueCahnged"/>-->
+
         <Label x:Name="displayLabel"
                Text="(uninitialized)"
                HorizontalOptions="Center"
                VerticalOptions="Center"/>
-            
-            
-        
+
+
+        <ImageButton Source="camera.svg"
+                     Scale="0.2"
+                     HorizontalOptions="Center"
+                     
+                     VerticalOptions="Center"/>
+
+
+        <Button Text="Submit"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Padding="10"
+                Style="{StaticResource ButtonStyle}"/>
 
 
     </VerticalStackLayout>
 </ContentPage>
+
+
+<!--Clicked="TakePhoto"-->

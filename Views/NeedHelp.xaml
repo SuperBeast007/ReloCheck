@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReloCheck.Views.NeedHelp"
+             xmlns:local="clr-namespace:ReloCheck"
+             Title="Need Help">
+    <VerticalStackLayout>
+        <Label 
+            Text="Support"
+            FontSize="Header"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Choose and area you need help with"
+            FontSize="Caption"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
+
+    </VerticalStackLayout>
+</ContentPage>

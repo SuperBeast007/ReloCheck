@@ -52,6 +52,7 @@
 	  <None Remove="Resources\Images\apple.svg" />
 	  <None Remove="Resources\Images\barcode.svg" />
 	  <None Remove="Resources\Images\box.svg" />
+	  <None Remove="Resources\Images\camera.svg" />
 	  <None Remove="Resources\Images\edit_room.svg" />
 	  <None Remove="Resources\Images\facebook.svg" />
 	  <None Remove="Resources\Images\googlelogo.svg" />
@@ -60,12 +61,14 @@
 	  <None Remove="Resources\Images\logout.svg" />
 	  <None Remove="Resources\Images\required_details.svg" />
 	  <None Remove="Resources\Images\room_details.svg" />
+	  <None Remove="Resources\Images\search.svg" />
 	  <None Remove="Resources\Images\space_allocation.svg" />
 	  <None Remove="Resources\Images\travel_distance.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Camera.MAUI" Version="1.4.4" />
+		<PackageReference Include="DevExpress.Data" Version="23.1.5" />
 		<PackageReference Include="IdentityModel.OidcClient" Version="5.2.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="MySql.Data" Version="8.1.0" />
@@ -90,6 +93,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\NeedHelp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\RequiredDetails.xaml">
